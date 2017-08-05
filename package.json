@@ -1,0 +1,64 @@
+{
+  "name": "app",
+  "description": "An auth gateway try to be flexible and pluggable ",
+  "version": "0.0.0",
+  "main": "server",
+  "author": {
+    "name": "pandada8",
+    "email": "pandada8@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "server",
+    "test": "test/"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint server/. test/. --config .eslintrc.json",
+    "start": "node server/",
+    "mocha": "mocha test/ --recursive",
+    "dev": "backpack dev",
+    "build": "nuxt build && backpack build",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "compression": "^1.7.0",
+    "cors": "^2.8.4",
+    "feathers": "^2.1.7",
+    "feathers-configuration": "^0.4.1",
+    "feathers-errors": "^2.9.1",
+    "feathers-hooks": "^2.0.2",
+    "feathers-hooks-common": "^3.6.1",
+    "feathers-rest": "^1.8.0",
+    "feathers-socketio": "^2.0.0",
+    "helmet": "^3.8.1",
+    "serve-favicon": "^2.4.3",
+    "winston": "^2.3.1",
+    "axios": "^0.16.2",
+    "cross-env": "^5.0.1",
+    "nuxt": "^1.0.0-rc3",
+    "source-map-support": "^0.4.15"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "mocha": "^3.5.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "babel-eslint": "^7.2.3",
+    "backpack-core": "^0.4.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
